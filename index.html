@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoodMix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="btn ghost" id="histBtn">История посещений</button>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="logo">MoodMix</div>
+      <p class="sub">Место для отдыха — под твоё настроение</p>
+      <div class="moods">
+        <button class="mood" data-mood="sad"><span class="e">🌙</span><b>Грустное</b><small>без настроения</small></button>
+        <button class="mood" data-mood="happy"><span class="e">🌅</span><b>Весёлое</b><small>настроение есть</small></button>
+      </div>
+      <button class="btn" id="findBtn">Найти места</button>
+      <div class="hint" id="hint"></div>
+    </section>
+
+    <section id="results" hidden>
+      <h2 id="resTitle"></h2>
+      <div class="grid" id="resGrid"></div>
+      <button class="btn ghost" data-back>← Вернуться к выбору настроения</button>
+    </section>
+
+    <section id="history" hidden>
+      <h2>История посещений</h2>
+      <div class="grid" id="histGrid"></div>
+      <button class="btn ghost" data-back>← Вернуться к выбору настроения</button>
+    </section>
+  </main>
+
+  <div class="modal" id="modal"><div class="box" id="box"></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
